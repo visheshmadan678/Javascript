@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <title>vishu or uska code</title>
+    <style>
+        .bdy{
+            background-color: black;
+            color:white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body class = "bdy">
+        <ul class="language">
+            <li>javascript</li>
+        </ul>
+
+</body>
+
+
+
+<script>
+    function addlang(langname){
+        const list = document.createElement('li'); // this will create a new li
+        list.textContent = `${langname}`;
+        const add = document.querySelector('.language');
+        add.appendChild(list);
+    }
+
+    addlang("python");
+    addlang("vishu badmash")
+    addlang("pappu badmash comic books ")
+    addlang("vishu badmos and marvel series 2020 LTD");
+
+    function addoptilanguage(langname){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langname));
+        const adder = document.querySelector('.language');
+        adder.appendChild(li);
+    }
+
+    addoptilanguage("abhay mehta");
+    addoptilanguage("harjeet singh khaira");
+
+    const secondlang = document.querySelector("li:nth-child(2)")
+    secondlang.innerHTML = "pappu"
+
+
+    const first_lang = document.querySelector("li:nth-child(1)");
+    first_lang.innerHTML = "vishubadmos"
+
+
+    const last_lang = document.querySelector("li:last-child");
+    last_lang.remove();
+</script>
+</html>

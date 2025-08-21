@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document object mode by vishu badmos</title>
+    <style>
+        .bdy{
+            background-color: black;
+            color:white;
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body class = "bdy">
+        <h1>New HTML file </h1>
+        <div class="parent">
+            <div class="day">monday</div>
+            <div class="day">tuesday</div>
+            <div class="day">wednesday</div>
+            <div class="day">thrusday</div>
+        </div>
+</body>
+
+<script>
+    const parent1 = document.querySelector('.parent')
+    const children = parent1.children;
+
+    const array = Array.from(children)
+
+    
+    
+    array.forEach((item)=>{
+        item.style.backgroundColor = 'green'
+        item.style.fontSize = "20px"
+        item.style.padding = "20px"
+    })
+
+    console.log(parent1.firstElementChild.innerHTML)
+
+   
+    
+    
+    
+</script>
+
+</html>
