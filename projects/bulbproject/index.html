@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bulb Switch Project</title>
+  <style>
+    body {
+      background-color: #f4f7fc; /* soft light background */
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .bulb {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .on-btn {
+      background-color: #4caf50;
+      color: white;
+    }
+
+    .off-btn {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .reset-btn {
+      background-color: #2196f3; /* blue */
+      color: white;
+    }
+
+    button:hover {
+      opacity: 0.8;
+    }
+
+    /* Broken bulb shake animation */
+    @keyframes shake {
+      0% { transform: translate(0px, 0px) rotate(0deg); }
+      25% { transform: translate(-5px, 5px) rotate(-5deg); }
+      50% { transform: translate(5px, -5px) rotate(5deg); }
+      75% { transform: translate(-5px, 5px) rotate(-5deg); }
+      100% { transform: translate(0px, 0px) rotate(0deg); }
+    }
+
+    .shake {
+      animation: shake 0.5s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Bulb OFF image (default) -->
+    <img id="bulbImage" src="bulb-off.png" alt="Bulb Off" class="bulb">
+
+    <div class="buttons">
+      <button class="on-btn">ON</button>
+      <button class="off-btn">OFF</button>
+      <button class="reset-btn">RESET</button> <!-- ✅ New reset button -->
+    </div>
+  </div>
+
+  <!-- Linking external JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
